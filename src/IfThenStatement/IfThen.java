@@ -8,6 +8,7 @@ public class IfThen {
         if (!isAlien) {
             System.out.println("It is not an alien!");
             System.out.println("And I'm afraid of aliens!");
+
         }
     }
 }
