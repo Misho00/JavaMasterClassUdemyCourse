@@ -1,28 +1,22 @@
-import OOP.Car;
+import OOP.BankAccount;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        car.setMake("Porsche");
-        car.setModel("Carrera");
-        car.setDoors(2);
-        car.setConvertible(true);
-        car.setColor("black");
-        System.out.println("make = " + car.getMake());
-        System.out.println("model = " + car.getModel());
-        System.out.println("color = " + car.getColor());
-        System.out.println("doors = " + car.getDoors());
-        System.out.println("convertible = " + car.isConvertible());
-        car.describeCar();
+        BankAccount bankAccount = new BankAccount();
 
+        bankAccount.setAccountNumber("35900");
+        bankAccount.setAccountBalance(1000.00);
+        bankAccount.setCustomerName("John Doe");
+        bankAccount.setEmail("john_doe@me.com");
+        bankAccount.setPhoneNumber("+0052356799");
 
-        Car targa = new Car();
-        targa.setMake("Porsche");
-        targa.setModel("Targa");
-        targa.setDoors(2);
-        targa.setConvertible(false);
-        targa.setColor("red");
-
-        targa.describeCar();
+        bankAccount.withdraw(100.00);
+        bankAccount.deposit(250);
+        bankAccount.withdraw(50.00);
+        bankAccount.withdraw(200);
+        bankAccount.deposit(100);
+        bankAccount.withdraw(45.55);
+        bankAccount.withdraw(54.46);
+        bankAccount.withdraw(54.45);
     }
 }
