@@ -1,19 +1,28 @@
+import OOP.Car;
+
 public class Main {
     public static void main(String[] args) {
+        Car car = new Car();
+        car.setMake("Porsche");
+        car.setModel("Carrera");
+        car.setDoors(2);
+        car.setConvertible(true);
+        car.setColor("black");
+        System.out.println("make = " + car.getMake());
+        System.out.println("model = " + car.getModel());
+        System.out.println("color = " + car.getColor());
+        System.out.println("doors = " + car.getDoors());
+        System.out.println("convertible = " + car.isConvertible());
+        car.describeCar();
 
-        //expressions
-        double kilometers = (100 * 1.609344);
 
-        int highScore = 50;
+        Car targa = new Car();
+        targa.setMake("Porsche");
+        targa.setModel("Targa");
+        targa.setDoors(2);
+        targa.setConvertible(false);
+        targa.setColor("red");
 
-        if (highScore > 25) {
-            highScore = 1000 + highScore; //add bonus points
-        }
-
-        int health = 100;
-
-        if ((health < 25) && (highScore > 1000)) {
-            highScore = highScore - 1000;
-        }
+        targa.describeCar();
     }
 }
