@@ -1,19 +1,21 @@
-import OOP.SimpleCalculator;
+import OOP.Person;
 
 public class Main {
     public static void main(String[] args) {
-        SimpleCalculator calculator = new SimpleCalculator();
-        calculator.setFirstNumber(0.0);
-        calculator.setSecondNumber(1.25);
-        System.out.println("divide= " + calculator.getDivisionResult());
+        Person person = new Person();
 
-        System.out.println("add= " + calculator.getAdditionResult());
-        System.out.println("subtract= " + calculator.getSubtractionResult());
+        person.setFirstName("");   // firstName is set to empty string
+        person.setLastName("");    // lastName is set to empty string
+        person.setAge(10);
 
-        calculator.setFirstNumber(5.25);
-        calculator.setSecondNumber(0);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setFirstName("John");    // firstName is set to John
 
-        System.out.println("multiply= " + calculator.getMultiplicationResult());
-        System.out.println("divide= " + calculator.getDivisionResult());
+        person.setAge(18);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setLastName("Smith");    // lastName is set to Smith
+        System.out.println("fullName= " + person.getFullName());
     }
 }
