@@ -1,21 +1,27 @@
-import OOP.Person;
+import OOP.BankAccount;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person();
+        /*BankAccount bankAccount = new BankAccount("35900", 1000.00, "John Doe",
+                "john_doe@me.com", "+0052356799");*/
+        BankAccount bankAccount = new BankAccount();
 
-        person.setFirstName("");   // firstName is set to empty string
-        person.setLastName("");    // lastName is set to empty string
-        person.setAge(10);
+        /*bankAccount.setAccountNumber("35900");
+        bankAccount.setAccountBalance(1000.00);
+        bankAccount.setCustomerName("John Doe");
+        bankAccount.setEmail("john_doe@me.com");
+        bankAccount.setPhoneNumber("+0052356799");*/
 
-        System.out.println("fullName= " + person.getFullName());
-        System.out.println("teen= " + person.isTeen());
-        person.setFirstName("John");    // firstName is set to John
+        bankAccount.withdraw(100.00);
+        bankAccount.deposit(250);
+        bankAccount.withdraw(50.00);
+        bankAccount.withdraw(200);
+        bankAccount.deposit(100);
+        bankAccount.withdraw(45.55);
+        bankAccount.withdraw(54.46);
+        bankAccount.withdraw(54.45);
 
-        person.setAge(18);
-        System.out.println("fullName= " + person.getFullName());
-        System.out.println("teen= " + person.isTeen());
-        person.setLastName("Smith");    // lastName is set to Smith
-        System.out.println("fullName= " + person.getFullName());
+        BankAccount secondBankAccount = new BankAccount("Tim", "tim@tim.com", "+34881234");
+        System.out.println("AccountNo: " + secondBankAccount.getAccountNumber() + " name: " + secondBankAccount.getCustomerName());
     }
 }

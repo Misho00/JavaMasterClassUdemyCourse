@@ -8,6 +8,24 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public BankAccount(){
+        this("35900", 2.50, "Default Name", "Default email", "Default number");
+        System.out.println("Empty constructor called");
+    }
+
+    public BankAccount(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber){
+        System.out.println("Parameterized constructor called");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this("9999", 255.5, customerName, email, phoneNumber);
+    }
+
     public void deposit(double amount) {
         accountBalance += amount;
         System.out.println("You've made deposit of $" + amount +  ", current balance is $" + this.accountBalance);
