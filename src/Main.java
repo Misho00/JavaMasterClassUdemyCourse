@@ -1,33 +1,25 @@
-import OOP.Animal;
-import OOP.Dog;
-import OOP.Fish;
+import OOP.Employee;
+import OOP.HourlyEmployee;
+import OOP.SalariedEmployee;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        Animal animal = new Animal("Generic Animal", "Huge", 400);
-        doAnimalStuff(animal, "slow");
+        Employee tim = new Employee("Tim", "11/11/1985", "01/01/2020");
 
-        Dog dog = new Dog();
-        doAnimalStuff(dog, "fast");
+        System.out.println(tim);
+        System.out.println("Age = " + tim.getAge());
+        System.out.println("Pay = " + tim.collectPay());
 
-        Dog yorki = new Dog("Yorki", 15);
-        doAnimalStuff(yorki, "fast");
+        SalariedEmployee joe = new SalariedEmployee("Joe", "11/11/1990", "03/03/2020", 35000);
+        System.out.println(joe);
+        System.out.println("Joe paycheck = $" + joe.collectPay());
+        joe.retire();
 
-        Dog retreiver = new Dog("Labrador Retreiver", 65, "Floppy", "Swimmer");
-        doAnimalStuff(retreiver, "slow");
+        System.out.println("Joe pension check = $" + joe.collectPay());
 
-        Dog wolf = new Dog("Wolf", 40);
-        doAnimalStuff(wolf, "slow");
-
-        Fish goldie = new Fish("Goldfish", 0.25, 2, 3);
-        doAnimalStuff(goldie, "fast");
-    }
-
-    public static void doAnimalStuff(Animal animal, String speed) {
-
-        animal.makeNoise();
-        animal.move(speed);
-        System.out.println(animal);
-        System.out.println("_____");
+        HourlyEmployee mary = new HourlyEmployee("Mary", "05/05/1970", "03/03/2021", 15);
+        System.out.println(mary);
+        System.out.println("Mary paycheck = $" + mary.collectPay());
+        System.out.println("Mary holiday pay = $" + mary.getDoublePay());
     }
 }
