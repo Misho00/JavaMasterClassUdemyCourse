@@ -1,20 +1,33 @@
-import OOP.ComplexNumber;
+import OOP.Animal;
+import OOP.Dog;
+import OOP.Fish;
 
 public class Main {
     public static void main(String[] args) {
-        ComplexNumber one = new ComplexNumber(1.0, 1.0);
-        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+        Animal animal = new Animal("Generic Animal", "Huge", 400);
+        doAnimalStuff(animal, "slow");
 
-        one.add(1,1);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
+        Dog dog = new Dog();
+        doAnimalStuff(dog, "fast");
 
-        one.subtract(number);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
+        Dog yorki = new Dog("Yorki", 15);
+        doAnimalStuff(yorki, "fast");
 
-        number.subtract(one);
-        System.out.println("number.real= " + number.getReal());
-        System.out.println("number.imaginary= " + number.getImaginary());
+        Dog retreiver = new Dog("Labrador Retreiver", 65, "Floppy", "Swimmer");
+        doAnimalStuff(retreiver, "slow");
+
+        Dog wolf = new Dog("Wolf", 40);
+        doAnimalStuff(wolf, "slow");
+
+        Fish goldie = new Fish("Goldfish", 0.25, 2, 3);
+        doAnimalStuff(goldie, "fast");
+    }
+
+    public static void doAnimalStuff(Animal animal, String speed) {
+
+        animal.makeNoise();
+        animal.move(speed);
+        System.out.println(animal);
+        System.out.println("_____");
     }
 }
