@@ -1,25 +1,15 @@
-import OOP.Employee;
-import OOP.HourlyEmployee;
-import OOP.SalariedEmployee;
+import OOP.Circle;
+import OOP.Cylinder;
 
 public class Main{
     public static void main(String[] args) {
-        Employee tim = new Employee("Tim", "11/11/1985", "01/01/2020");
-
-        System.out.println(tim);
-        System.out.println("Age = " + tim.getAge());
-        System.out.println("Pay = " + tim.collectPay());
-
-        SalariedEmployee joe = new SalariedEmployee("Joe", "11/11/1990", "03/03/2020", 35000);
-        System.out.println(joe);
-        System.out.println("Joe paycheck = $" + joe.collectPay());
-        joe.retire();
-
-        System.out.println("Joe pension check = $" + joe.collectPay());
-
-        HourlyEmployee mary = new HourlyEmployee("Mary", "05/05/1970", "03/03/2021", 15);
-        System.out.println(mary);
-        System.out.println("Mary paycheck = $" + mary.collectPay());
-        System.out.println("Mary holiday pay = $" + mary.getDoublePay());
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
     }
 }
