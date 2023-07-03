@@ -11,5 +11,9 @@ public class ScienceFiction extends Movie {
         super.watchMovie();
         System.out.printf("..%s%n".repeat(3), "Bad Aliens Do Bad Stuff", "Space Guys Chase Aliens", "Planet Blows Up");
     }
+
+    public void watchScienceFiction() {
+        System.out.println("Watching a Science Fiction Thriller");
+    }
 }
 
