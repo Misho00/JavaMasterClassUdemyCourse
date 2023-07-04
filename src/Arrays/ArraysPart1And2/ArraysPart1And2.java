@@ -1,4 +1,4 @@
-package Arrays.ArraysPart1;
+package Arrays.ArraysPart1And2;
 
 import java.util.Arrays;
 
